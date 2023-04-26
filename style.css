@@ -34,7 +34,7 @@ button:active {
 }
  
 div {
-  width: 380px;
+  width: 500px;
   overflow: hidden;
   display: flex;
   align-items: center;
