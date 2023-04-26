@@ -1,0 +1,52 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  font-family: Pretendard;
+}
+
+body {
+  background: #f7f8fc;
+}
+
+canvas {
+  transition: 2s;
+}
+
+button {
+  background: #febf00;
+  margin-top: 1rem;
+  padding: .8rem 1.8rem;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+button:active {
+  background: #444;
+  color: #f9f9f9;
+}
+ 
+div {
+  width: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 50px;
+  border-radius: 5px;
+  background: #000;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 22;
+}
