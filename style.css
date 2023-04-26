@@ -4,13 +4,6 @@
   font-family: Pretendard;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 body {
   background: #f7f8fc;
   display: flex;
@@ -60,4 +53,11 @@ div::before {
   left: 50%;
   transform: translateX(-50%);
   z-index: 22;
+}
+
+input {
+  width: 80%;
+  padding: 1rem;
+  border: black 2px solid;
+  border-radius: 5px;
 }

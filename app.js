@@ -24,7 +24,6 @@ function handleFileLoad(event) {
   const numColors = person.length;
   colors = Array.from({length: numColors}, () => `#${Math.floor(Math.random() * 16777215).toString(16)}`);
   console.log(person, colors);
-  // newMake() 함수를 호출하고, person과 colors를 인자로 전달합니다.
   newMake();
 }
 

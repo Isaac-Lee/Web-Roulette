@@ -7,16 +7,15 @@
 </head>
 
 <body>
-    <div class="container">
-        <input type="file" id="fileInput" accept=".xlsx, .xls">
-        <div>
-            <canvas width="380" height='380'></canvas>
-            <button onclick="rotate()">룰렛 돌리기</button>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="app.js"></script>
+    <div>
+        <canvas width="400" height='400'></canvas>
+        <button onclick="rotate()">룰렛 돌리기</button>
+        <hr>
+        룰렛을 돌릴 파일을 넣어주세요<input type="file" id="fileInput" accept=".xlsx, .xls">
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
