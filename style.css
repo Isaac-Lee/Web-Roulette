@@ -26,6 +26,7 @@ button {
   border-radius: 5px;
   transition: .2s;
   cursor: pointer;
+  z-index: 99;
 }
 
 button:active {
