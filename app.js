@@ -20,7 +20,7 @@ function handleFileLoad(event) {
   const workbook = XLSX.read(data, {type: 'binary'});
   const worksheet = workbook.Sheets[workbook.SheetNames[0]];
   const json = XLSX.utils.sheet_to_json(worksheet);
-  person = json.map(item => `${item.name} ${item.ticketNumber}`);
+  person = json.map(item => `${item.index} ${item.name} ${item.email}`);
   const numColors = person.length;
   colors = Array.from({length: numColors}, () => `#${Math.floor(Math.random() * 16777215).toString(16)}`);
   console.log(person, colors);
@@ -56,9 +56,7 @@ const newMake = () => {
 
         ctx.rotate(angle + Math.PI / 2);
 
-        person[i].split(" ").forEach((text, j) => {
-            ctx.fillText(text, 0, 30 * j);
-        });
+        ctx.fillText(person[i].split(" ")[0], 0, 30);
 
         ctx.restore();
     }
