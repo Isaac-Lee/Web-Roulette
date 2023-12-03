@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <title>Rullet</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+  <head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div>
-        <canvas width="500" height='500'></canvas>
-        <button onclick="rotate()">룰렛 돌리기</button>
-        <hr>
-        룰렛을 돌릴 파일을 넣어주세요<input type="file" id="fileInput" accept=".xlsx, .xls">
+      <canvas width="500" height="500"></canvas>
+      <button onclick="rotate()">룰렛 돌리기</button>
+      <hr />
+      룰렛을 돌릴 파일을 넣어주세요
+      <input type="file" id="fileInput" accept=".xlsx, .xls" />
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
