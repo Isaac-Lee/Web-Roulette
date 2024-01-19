@@ -2,6 +2,10 @@
 
 Super simple roulette program that can run everywhere if there is a web browser
 
+## Try Now!
+
+👉 [WEB-ROULETTE](https://isaac-lee.github.io/Web-Roulette/index.html) 👈 
+
 ## How to use?
 
 1. Open a html file with your browser.
