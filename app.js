@@ -22,7 +22,7 @@ function handleFileLoad(event) {
     const json = XLSX.utils.sheet_to_json(worksheet);
     person = json.map(item => `${item.index} ${item.name} ${item.email}`);
     const numColors = person.length;
-    colors = Array.from({ length: numColors }, () => `#${Math.floor(Math.random() * 16777215).toString(16)}`);
+    colors = Array.from({ length: numColors }, () => `#${Math.floor(getSecureRandomDecimal() * 16777215).toString(16)}`);
     newMake();
 }
 
@@ -74,7 +74,7 @@ const rotate = () => {
     $c.style.transition = `initial`;
 
     setTimeout(() => {
-        const ran = Math.floor(Math.random() * person.length);
+        const ran = Math.floor(getSecureRandomDecimal() * person.length);
 
         const arc = 360 / person.length;
         const rotate = (ran * arc) + 3600 + (arc / 2);
@@ -100,5 +100,14 @@ const rotate = () => {
         }, 5000);
     }, 1);
 };
+
+function getSecureRandomDecimal() {
+    const randomBuffer = new Uint32Array(1);
+    window.crypto.getRandomValues(randomBuffer);
+
+    const maxUint32 = 0xFFFFFFFF; // 2^32 - 1
+    const randomUint32 = randomBuffer[0];
+    return randomUint32 / (maxUint32 + 1);
+}
 
 newMake();
